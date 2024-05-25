@@ -1,3 +1,4 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -64,9 +65,9 @@
     width: 100%;
     z-index: -1;
     opacity: 1;
-    
 }
-.icons{
+
+.icons {
     color: #f1f2f3;
 }
 
@@ -84,9 +85,11 @@
     margin: 10px;
     background-color: rgb(0, 3, 5);
 }
-h1{
-    color:#f9f9f9
+
+h1 {
+    color: #f9f9f9;
 }
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -94,8 +97,9 @@ h1{
 }
 
 .gallery img {
-    width: 360px;
-    height: 500px;
+    width: 100%;
+    max-width: 360px;
+    height: 330px;
     padding: 10px;
     margin: 10px;
 }
@@ -115,13 +119,14 @@ h1{
 
 .columns {
     display: grid;
-    grid-template-columns: auto auto;
-    padding-left: 50px;
+    grid-template-columns: 1fr;
+    padding-left: 0;
 }
 
 .box {
-    height: 230px;
-    width: 500px;
+    height: auto;
+    width: 100%;
+    max-width: 500px;
     background-color: rgba(18, 0, 0, 0.1);
     border-radius: 10px;
     margin: 10px;
@@ -142,31 +147,30 @@ h1{
 /* About Section */
 #about {
     display: flex;
-    margin:10px;
+    margin: 10px;
     flex-direction: column;
     background-color: black;
-    height: 700px;
+    height: auto;
 }
-#about h3 {
-    color:white;
-}
-#about h1 {
-    color:white;
-    margin: 55px;
-}
-#about h2 {
-    color:white;
-}
+
+#about h3,
+#about h1,
+#about h2,
 #about p {
-    color:white;
+    color: white;
 }
+
 .about {
     display: flex;
+
+    
+    text-align: top;
 }
 
 .about img {
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
     padding: 0px 30px;
 }
 
@@ -176,7 +180,7 @@ h1{
 
 .name h2 {
     font-size: 2rem;
-    color:white;
+    color: white;
 }
 
 .name p {
@@ -192,251 +196,120 @@ h1{
 }
 
 .contact {
-    background: white;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 2.5rem;
-}
-
-.contact-text h4,
-.contact-text h2 {
-    color: white;
-    margin: 18px 0;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.contact-text p {
-    color: rgb(186, 143, 226);
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 30px;
-}
-
-.list li {
-    margin-bottom: 12px;
-}
-
-.list li a {
-    display: block;
-    color: white;
-    font-size: 14px;
-    transition: all 0.45s ease;
-}
-
-.list li a:hover {
-    color: white;
-    transform: translateY(5px);
-}
-
-.contact-icons i {
-    height: 45px;
-    width: 45px;
-    color: rgb(245, 243, 247);
-    font-size: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.45s ease;
-}
-
-.contact-icons i:hover {
-    color: rgb(198, 200, 202);
-}
-
-.form {
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.input,
-#message,
-#submit {
-    padding: 15px 20px;
-    margin: 15px 0;
-    border: none;
-    outline: auto;
-    border-radius: 10px;
-}
-
-.input,
-#message {
-    width: 100%;
-}
-
-#submit {
-    background-color: rgb(26, 101, 91);
-    color: white;
-    cursor: pointer;
-}
-
-#submit:hover {
-    background-color: rgb(26, 60, 65);
-}
-
-/* Footer */
-#footer {
-    padding: 20px;
-    color: #f4f6fd;
-    font-size: 14px;
-    position: fixed;
-    margin:10px;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background: #0c0000;
-    z-index: 9999;
-}
-
-.top i {
-    padding: 10px;
-    border-radius: 8px;
-    font-size: 15px;
-    color: var(--text-color);
-    background: var(--main-color);
-}
-
-#footer .copyright {
-    text-align: center;
-}
-
-#footer .credits {
-    text-align: center;
-    font-size: 13px;
-    color: #eaebf0;
-}
-
-@media (max-width: 1199px) {
-    #footer {
-        position: static;
-        width: auto;
-        padding: 20px 15px;
-    }
-}
-.contact-icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.contact-icons a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #333; /* Default color for icons */
-}
-
-.contact-icons a:hover {
-    color:rgb(3, 121, 161); /* Color for icons on hover */
-}
-/* Style for contact section */
-.contact {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f9f9f9; /* Change the background color as needed */
-    padding: 60px 0; /* Adjust padding as needed */
+    background: #f3f1f1;
+    padding: 60px 0;
 }
 
 .contact .heading {
-    margin-bottom: 30px; /* Add some spacing below the heading */
+    margin-bottom: 30px;
 }
 
 .contact-text {
     text-align: center;
-    margin-bottom: 30px; /* Add some spacing below the contact text */
+    margin-bottom: 30px;
+}
+
+.contact-text h2{
+    color: #7e0aeb;
+}
+.contact-text h4,
+.contact-text p {
+    color: white;
 }
 
 .contact-text h2 {
     font-size: 24px;
-    margin-bottom: 10px; /* Add spacing below the contact text heading */
+    margin-bottom: 10px;
 }
 
 .contact-text h4 {
     font-size: 18px;
-    margin-bottom: 10px; /* Add spacing below the project description */
+    margin-bottom: 10px;
 }
 
 .contact-text p {
     font-size: 16px;
-    margin-bottom: 30px; /* Add spacing below the contact text */
+    margin-bottom: 30px;
 }
 
 .contact-text ol {
     list-style: none;
+   
     padding: 0;
 }
-
+.list li a{
+    color:white;
+}
 .contact-text li {
     margin-bottom: 10px;
+    color: #dddee0;
 }
 
 .contact-text a {
-    color: #333; /* Set link color */
+    color: #333;
     text-decoration: none;
-    transition: color 0.3s ease; /* Smooth color transition on hover */
+    transition: color 0.3s ease;
 }
 
 .contact-text a:hover {
-    color: #6e16c1; /* Change link color on hover */
+    color: #6e16c1;
 }
 
-/* Style for contact icons */
 .contact-icons {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px; /* Add some spacing below the contact icons */
+    margin-bottom: 30px;
 }
 
 .contact-icons a {
-    margin: 0 10px; /* Add spacing between contact icons */
+    margin: 0 10px;
     text-decoration: none;
-    color: #333; /* Set icon color */
-    font-size: 24px; /* Set icon size */
-    transition: color 0.3s ease; /* Smooth color transition on hover */
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s ease;
 }
 
 .contact-icons a:hover {
-    color: #02a5ae; /* Change icon color on hover */
+    color: #02a5ae;
 }
 
-/* Style for the form */
 .form {
     width: 100%;
-    max-width: 600px; /* Set maximum width for the form */
+    max-width: 600px;
 }
 
 .input,
 textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px; /* Add spacing between form inputs */
-    border: 1px solid #ccc; /* Add border to form inputs */
-    border-radius: 5px; /* Add border radius to form inputs */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 textarea {
-    resize: vertical; /* Allow vertical resizing of textarea */
+    resize: vertical;
 }
 
 #submit {
     width: 100%;
     padding: 10px;
-    background-color: #0b79b4; /* Set button background color */
-    color: #fff; /* Set button text color */
+    background-color: #0b79b4;
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+    transition: background-color 0.3s ease;
 }
 
 #submit:hover {
-    background-color: #083553; /* Change button background color on hover */
+    background-color: #083553;
 }
+
 .contact-icons {
     display: flex;
     justify-content: center;
@@ -446,32 +319,36 @@ textarea {
 .contact-icons a {
     margin: 0 10px;
     text-decoration: none;
-    color: #e8e9e9; /* Default color for icons */
-    font-size: 24px; /* Adjust icon size as needed */
+    color: #e8e9e9;
+    font-size: 24px;
 }
 
 .contact-icons a:hover {
-    color: #ff4500; /* Color for icons on hover */
+    color: #ff4500;
 }
+
 .social-icons {
     margin-bottom: 40px;
 }
+
 .social-icons a {
-    text-decoration: none; 
+    text-decoration: none;
     font-size: 30px;
     color: #fff;
 }
-.icons{
+
+.icons {
     color: #f1f2f3;
 }
-#skills{
+
+#skills {
     background-color: #0a0404;
-    margin:15px;
+    margin: 15px;
     height: 750px;
     padding: 10px 300px;
 }
 
-.skills{
+.skills {
     position: relative;
     max-width: 1500px;
     width: 100%;
@@ -480,71 +357,83 @@ textarea {
     padding: 10px 20px;
     border-radius: 7px;
 }
-.skills .skill-box{
+
+.skills .skill-box {
     width: 100%;
     margin: 30px 0;
 }
-.skill-box .title{
+
+.skill-box .title {
     display: block;
     font-size: 25px;
     font-weight: 600;
     color: #f7f6f6;
 }
-.skill-box .skill-bar{
+
+.skill-box .skill-bar {
     height: 15px;
     width: 100%;
     border-radius: 10px;
     margin-top: 6px;
     background: rgb(227, 226, 226);
 }
-.skill-bar .skill-per{
+
+.skill-bar .skill-per {
     position: relative;
     display: block;
     height: 100%;
     width: 90%;
-    border-radius:  10px;
-    background:#05b4ff;
+    border-radius: 10px;
+    background: #05b4ff;
     animation: progress 0.4s ease-in-out forwards;
     opacity: 0;
 }
-.skill-per.css{
+
+.skill-per.css {
     width: 70%;
     animation-delay: 0.1s;
 }
-.skill-per.javascript{
+
+.skill-per.javascript {
     width: 50%;
     animation-delay: 0.2s;
 }
-.skill-per.python{
+
+.skill-per.python {
     width: 65%;
     animation-delay: 0.3s;
 }
-.skill-per.Java{
+
+.skill-per.Java {
     width: 65%;
     animation-delay: 0.4s;
 }
+
 @keyframes progress {
-    0%{
+    0% {
         width: 0;
         opacity: 1;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
-.skill-per .tooltip{
+
+.skill-per .tooltip {
     position: absolute;
     right: -14px;
     top: -28px;
     font-size: 15px;
     font-weight: 500;
-    color:#202020;
+    color: #202020;
     padding: 2px 6px;
     border-radius: 3px;
     background: #fbfcfd;
     z-index: 1;
 }
-.tooltip::before{
+
+.tooltip::before {
     content: '';
     position: absolute;
     left: 50%;
@@ -552,6 +441,7 @@ textarea {
     height: 20px;
     width: 20px;
     z-index: -1;
-    background-color: #f2f2f9;
+    background: #fbfcfd;
     transform: translateX(-50%) rotate(45deg);
+    box-shadow: -3px -3px 5px rgba(214, 213, 213, 0.1);
 }
