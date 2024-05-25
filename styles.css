@@ -355,8 +355,8 @@ textarea {
 #skills {
     background-color: #0a0404;
     margin: 15px;
-    height: 750px;
-    padding: 10px 300px;
+    padding: 10px 20px; /* Reduced padding for smaller screens */
+    height: auto; /* Let height adjust automatically */
 }
 
 .skills {
@@ -364,7 +364,7 @@ textarea {
     max-width: 1500px;
     width: 100%;
     background: #0a0404;
-    margin: 0 15px;
+    margin: 0 auto; /* Center the skills container */
     padding: 10px 20px;
     border-radius: 7px;
 }
@@ -393,7 +393,6 @@ textarea {
     position: relative;
     display: block;
     height: 100%;
-    width: 90%;
     border-radius: 10px;
     background: #05b4ff;
     animation: progress 0.4s ease-in-out forwards;
@@ -455,4 +454,23 @@ textarea {
     background: #fbfcfd;
     transform: translateX(-50%) rotate(45deg);
     box-shadow: -3px -3px 5px rgba(214, 213, 213, 0.1);
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 768px) {
+    #skills {
+        padding: 10px 100px; /* Increase padding for medium screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    #skills {
+        padding: 10px 200px; /* Increase padding for large screens */
+    }
+}
+
+@media (min-width: 1200px) {
+    #skills {
+        padding: 10px 300px; /* Original padding for extra large screens */
+    }
 }
