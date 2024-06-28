@@ -96,14 +96,12 @@ h1.heading {
     margin: auto;
 }
 .about img {
-   
-    width: 500px;
+    display: block;
+    max-width: 100%;
     height: auto;
+    margin: auto;
+    border-radius: 50%;
 }
-
-
-
-    
 .icons {
     display: flex;
     justify-content: center;
